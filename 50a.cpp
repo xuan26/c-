@@ -1,8 +1,9 @@
-#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main(){
     int m,n;
-    std::cin >> m >> n;
+    cin >> m >> n;
 
     int b,s;
     if(m > n){
@@ -15,5 +16,5 @@ int main(){
     if(b % 2 == 1){
         ans += s / 2;
     }
-    std::cout << ans << std::endl;
+    cout << ans << endl;
 }

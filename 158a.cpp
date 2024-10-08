@@ -1,23 +1,21 @@
-#include <iostream>
-#include <sstream>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main(){
     int n,score;
-    std::cin >> n >> score;
+    cin >> n >> score;
 
-    std::vector<int> numbers(n);
-
-    for (int i = 0; i < n; ++i) {
-        std::cin >> numbers[i];
+    vector<int> data(n);
+    for (int &i:data){
+        cin >> i;
     }
-
     int total = 0;
-    for (size_t i = 0; i < numbers.size(); ++i) {
-        if(numbers[i] >= numbers[score-1] && (numbers[i] != 0 && numbers[score-1] != 0)){
+    for (int i = 0; i < data.size(); i++){
+        if(data[i] >= data[score-1] && data[i] != 0){
             total++;
         }
-    }   
-    std::cout << total << std::endl;
+    }
+    
+    cout << total << endl;
     return 0;
 }

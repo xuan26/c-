@@ -1,30 +1,20 @@
-#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main(){
-    std::string dataA;
-    std::string dataB;
-    std::cin >> dataA;
-    std::cin >> dataB;
+    string dataA;
+    string dataB;
+    cin >> dataA >> dataB;
 
-    int ansA = 0;
-    for(char i : dataA){
-        if(i > 64 && i < 91){
-            i += 32;
-        }
-        ansA += char(i);
-    }
-    int ansB = 0;
-    for(char i : dataB){
-        if(i > 64 && i < 91){
-            i += 32;
-        }
-        ansB += char(i);
-    }
-    if(ansA == ansB){
-        std::cout << 0 << std::endl;
-    }else if(ansA <= ansB){
-        std::cout << -1 << std::endl;
-    }else if(ansA >= ansB)
-        std::cout << 1 << std::endl;
+    // 將 dataA 和 dataB 轉換為小寫
+    transform(dataA.begin(), dataA.end(), dataA.begin(), ::tolower);
+    transform(dataB.begin(), dataB.end(), dataB.begin(), ::tolower);
+
+    if(dataA == dataB){
+        cout << 0 << endl;
+    }else if(dataA <= dataB){
+        cout << -1 << endl;
+    }else if(dataA >= dataB)
+        cout << 1 << endl;
     return 0;
 }
