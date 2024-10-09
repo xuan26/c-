@@ -1,11 +1,11 @@
-#include<iostream>
-#include<string>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main(){
-    std::string data;
-    std::cin >> data;
+    string data;
+    cin >> data;
     
-    std::string ans = "";
+    string ans = "";
     bool bl = false;
     if(data[0] > 64 && data[0] < 91){
         bl = true;
@@ -18,6 +18,6 @@ int main(){
     for(int i=1;i<data.length();++i){
         ans += data[i];
     }
-    std::cout << ans << std::endl;
+    cout << ans << endl;
     return 0;
 }
